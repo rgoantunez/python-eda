@@ -20,7 +20,7 @@ El proceso de transformación de datos se enfocó en garantizar la integridad es
     * **Temporalidad**: Uso de *Forward Fill* para `fecha_llam` preservando el orden cronológico.
 
 ### Segmentación de Datos (Feature Engineering)
-Se crearon nuevas dimensiones estratégicas para profundizar el análisis:
+Se crearon nuevas dimensiones estratégicas para profundizar en el análisis:
 * `duracion_llam_min`: Conversión de segundos a minutos para una interpretación más práctica.
 * `antiguedad_cliente_anos`: Cálculo del ciclo de vida del cliente desde su vinculación hasta el impacto de la campaña.
 * **Categorizaciones**: Segmentación por Nivel Educativo (Bajo/Medio/Alto), Ingresos (cuartiles), Tamaño de Familia (Pequeña/Mediana/Grande) y Frecuencia de Consultas Web.
@@ -33,7 +33,7 @@ Se identificó una correlación positiva directa entre la duración de la llamad
 * **Insight**: El tiempo es una inversión necesaria; llamadas cortas son indicadores tempranos de falta de interés.
 
 ### 2. Punto de Saturación y Eficiencia Operativa 📞
-El análisis del número de llamadas (`num_llam`) revela un rendimiento decreciente. La probabilidad de éxito alcanza su pico entre el 1er y 3er intento, luego la rentabilidad cae drásticamente.
+El análisis del número de contactos (`num_llam`) revela un rendimiento decreciente. La probabilidad de éxito alcanza su pico entre el 1er y 3er intento, luego de lo cual la rentabilidad cae drásticamente.
 * **Insight**: Contactar a un cliente más de 5 veces para la misma campaña reduce drásticamente el ROI y aumenta el riesgo de insatisfacción.
 
 ### 3. Perfil del Cliente Suscriptor 👤
@@ -41,29 +41,40 @@ El análisis del número de llamadas (`num_llam`) revela un rendimiento decrecie
 * **Carga Financiera**: El "Heatmap de Endeudamiento" mostró que los clientes sin préstamos personales previos tienen mayor liquidez y disposición para contratar nuevos servicios.
 
 ### 4. Comparativa de Campañas 📈
-Al contrastar con la campaña previa, se observa que la eficiencia ha mejorado (**11.27%** de éxito frente a un **3.34%** previo). No obstante, este resultado debe tomarse con cautela, ya que la campaña previa contiene un 86% de datos catalogados como "inexistente", lo que cual hace una comparativa inconsistente desde un punto de vista estadístico.
+Al contrastar con la campaña previa, se observa que la eficiencia ha mejorado (**11.27%** de éxito frente a un **3.34%** previo). No obstante, este resultado debe tomarse con cautela, ya que el historial previo contiene un 86% de datos catalogados como "inexistente", lo que dificulta una comparativa estadística sólida.
+
+## 🌟 Análisis Visual Destacado: Impacto del Tiempo de Llamadas en la Suscripción 
+
+![Dispersión y Densidad del Tiempo de Llamada](https://github.com/rgoantunez/python-eda/blob/main/notebooks/grafico-dur-llam.png)
+*(Gráficos extraídos del notebook `notebooks/EDA_Bank.ipynb`)*
+
+**Interpretación Estratégica:**
+La visualización combinada demuestra empíricamente cómo el tiempo de interacción define el éxito comercial del producto:
+* **Dispersión y Mediana (Izquierda):** El *Boxplot* revela una brecha clara en las medianas. Las llamadas fallidas se cortan rápidamente a los 2.72 minutos, mientras que las exitosas (7.48 min) exigen una mayor inversión de tiempo por parte del equipo de ventas para explicar el producto en detalle.
+* **Densidad de Conversión (Derecha):** El gráfico *KDE* visualiza que la masa de clientes que rechazan la oferta se concentra fuertemente en los primeros 3 minutos. Por otra parte, la curva de los suscriptores es más extendida, confirmando que el cierre del negocio requiere de cierto asesoramiento extra. 
 
 ## Recomendaciones de Negocio
 Basado en el análisis realizado, se proponen las siguientes acciones estratégicas:
 * **Limitar las llamadas a un máximo de 4 intentos** para optimizar el tiempo operativo y el ROI.
 * **Priorizar la prospección de clientes sin deudas vigentes** (hipotecas o préstamos personales).
 * Enfocar los esfuerzos comerciales en perfiles con un **nivel educativo medio-alto**, quienes muestran una respuesta más favorable al producto.
+* Es sugerible rediseñar el formato de la llamada mencionando anticipadamente las ventajas del producto, y profundizar luego si el cliente presenta interés.
 
 ## Visualización de los Datos
-El proyecto incluye visualizaciones avanzadas utilizando `Seaborn` y `Matplotlib`:
+El proyecto incluye visualizaciones adicionales utilizando `Seaborn` y `Matplotlib`:
 * **Histogramas y KDE**: Análisis de la distribución de edad e ingresos.
 * **Boxplots Comparativos**: Detección de outliers en el esfuerzo comercial.
 * **Heatmaps de Correlación**: Identificación de variables críticas en la decisión de suscripción.
 
 ## Tecnologías Utilizadas
-* **Python 3.12**
+* **Python 3.14**
 * **Pandas & NumPy**: Manipulación y limpieza de datos.
 * **Matplotlib & Seaborn**: Visualización estadística.
 * **VS Code & Jupyter Notebook**: Entornos de desarrollo.
 
 ## 👨‍💻 Autor
 **Rodrigo Antúnez**  
-Economist & Data Analyst en formación, con manejo de Python, SQL & Herramientas BI.
+Economist & Data Analyst en formación con enfoque en análisis Python, SQL & herramientas BI.
 
 🔗 GitHub: https://github.com/rgoantunez 
-🔗 Repositorio del proyecto:
+🔗 Repositorio del proyecto: https://github.com/rgoantunez/python-eda
