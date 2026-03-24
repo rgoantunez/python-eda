@@ -854,4 +854,5 @@ previa_pct = df['result_camp.previa'].value_counts(normalize = True) * 100
 for resultado, porcentaje in previa_pct.items():
     print(f"{resultado.capitalize()}: {porcentaje:.2f}%")
 
-
+import os
+df.to_csv('data/bank-marketing-processed.csv', index=False, sep=',', encoding='utf-8')
