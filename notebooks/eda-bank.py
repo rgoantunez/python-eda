@@ -8,7 +8,7 @@ import warnings
 warnings.filterwarnings('ignore', category=UserWarning)
 
 # %%
-bank = pd.read_csv('/Users/rodrigoantunez/Documents/Data Analytics/Python_Advanced/bank-additional.csv')
+bank = pd.read_csv('../data/bank-additional.csv')
 bank
 
 # %%
@@ -29,7 +29,7 @@ bank.duplicated().sum()
 
 # %%
 #importo el otro archivo a trabajar (un xlsx complementario a mi base de datos csv)
-customer = pd.read_excel('/Users/rodrigoantunez/Documents/Data Analytics/Python_Advanced/unified-customer-details.xlsx')
+customer = pd.read_excel('../data/unified-customer-details.xlsx')
 customer 
 
 # %%
