@@ -74,7 +74,7 @@ El proyecto incluye visualizaciones adicionales utilizando `Seaborn` y `Matplotl
 
 ## 👨‍💻 Autor
 **Rodrigo Antúnez**  
-Economist & Data Analyst en formación con enfoque en análisis Python, SQL & herramientas BI.
+Economista | Data Analyst en formación con perfil analítico en Python, SQL & herramientas BI.
 
 🔗 GitHub: https://github.com/rgoantunez 
 🔗 Repositorio del proyecto: https://github.com/rgoantunez/python-eda
