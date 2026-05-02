@@ -1,4 +1,4 @@
-# Análisis de Campañas de Marketing Bancario 📊
+# 📊 Análisis de Campañas de Marketing Bancario
 
 ## Propósito del Proyecto
 El objetivo de este proyecto es determinar el éxito de la campaña de marketing implementada por un Banco portugués, basada en la captación de depósitos a plazo mediante llamadas telefónicas. A través de un proceso de **ETL** (Extracción, Transformación y Carga) y un **EDA** (Análisis Exploratorio de Datos), se busca identificar el perfil del cliente con mayor propensión a suscribir el producto y optimizar la eficiencia operativa de las llamadas.
@@ -48,8 +48,7 @@ Al contrastar con la campaña previa, se observa que la eficiencia ha mejorado (
 ![Dispersión y Densidad del Tiempo de Llamada](https://github.com/rgoantunez/python-eda/blob/main/notebooks/grafico-dur-llam.png)
 *(Gráficos extraídos del notebook `notebooks/EDA_Bank.ipynb`)*
 
-**Interpretación Estratégica**
-Esta visualización combinada demuestra empíricamente cómo el tiempo de interacción define el éxito comercial del producto:
+**Interpretación Estratégica:** esta visualización combinada demuestra empíricamente cómo el tiempo de interacción define el éxito comercial del producto:
 * **Dispersión y Mediana (Izquierda):** El *Boxplot* revela una brecha clara en las medianas. Las llamadas fallidas se cortan rápidamente a los 2.72 minutos, mientras que las exitosas (7.48 min) exigen una mayor inversión de tiempo por parte del equipo de ventas para explicar el producto en detalle.
 * **Densidad de Conversión (Derecha):** El gráfico *KDE* visualiza que la masa de clientes que rechazan la oferta se concentra fuertemente en los primeros 3 minutos. Por otra parte, la curva de los suscriptores es más extendida, confirmando que el cierre del negocio requiere de cierto asesoramiento extra. 
 
@@ -76,5 +75,6 @@ El proyecto incluye visualizaciones adicionales utilizando `Seaborn` y `Matplotl
 **Rodrigo Antúnez**  
 Economista | Data Analyst en formación con perfil analítico en Python, SQL & herramientas BI.
 
-🔗 GitHub: https://github.com/rgoantunez 
+🔗 GitHub: https://github.com/rgoantunez
+
 🔗 Repositorio del proyecto: https://github.com/rgoantunez/python-eda
